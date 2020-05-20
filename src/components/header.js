@@ -1,42 +1,41 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
+import {Link} from 'gatsby';
+import '../globalstyle.css';
+import { css } from '@emotion/core';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
+    return (
+        <div css={mainheader}>
+         <div>
+               <Link to='/'>Home</Link>
+            </div>
+              <div>
+               <Link to='/signin'>SignIn</Link>
+              </div>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+               <div>
+               <Link to='/signup'>SignUp</Link>
+            
+              </div>
+        </div>
+    );
+};
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+export default Header;
 
-export default Header
+
+const mainheader = css`
+display: flex;
+justify-content: space-between;
+box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.2);
+padding: 10px 20px;
+    a{
+        text-decoration:none;
+        font-size:22px;
+        list-style-type: none;
+    }
+`
+const nav = css`
+ display: flex;
+ justify-content: space-between;
+`

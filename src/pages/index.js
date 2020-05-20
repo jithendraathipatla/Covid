@@ -1,21 +1,21 @@
-import React from "react"
-import { Link } from "gatsby"
+import React,{useContext} from "react";
+import HeaderComponent from '../components/header';
+import {Link} from 'gatsby';
+import Themecontext from '../context/logincontext';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage = () => {
+const con = useContext(Themecontext);
+return(
+  console.log(con),
+  <div>
+    <HeaderComponent/>
+    <div style={{textAlign:"center", marginTop:"15%"}}>
+      <h4> <Link to='/signin'>SingIn</Link>  or <Link to='/signup'>Signup</Link> to view the Content</h4>
+      <p>Note: Use athipatala.jithendra@gmail.com and Jithendra@18 as Password to see the content in the signup page</p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  </div>
 )
+}
 
-export default IndexPage
+export default IndexPage;

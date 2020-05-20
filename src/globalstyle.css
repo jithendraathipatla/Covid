@@ -1,0 +1,38 @@
+body{
+    margin:0px !important;
+    padding: 0px !important;
+    font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.servicestext{
+    font-size:1rem;
+    animation: example 2s infinite;
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation: example 2s infinite;
+    margin: 0%;
+    padding:20px;
+    border-radius: 6px;
+    color: white;
+}
+
+@media only screen and (max-width:600px){
+    .servicestext{
+        font-size: 1.2rem;
+        font-weight: 500;
+        animation: example 2s infinite;
+        margin: 45% 10%;
+        padding:20px;
+        border-radius: 6px;
+        color: white;
+    }
+}
+
+@keyframes example{
+    0%{
+        background: linear-gradient(to left, #2196F3, orange);
+    }
+    100%{
+        background: linear-gradient(to left, orange, #2196F3);
+    }
+}
